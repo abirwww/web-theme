@@ -1,0 +1,118 @@
+header{
+    // border: var(--border);
+     .header_body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0px;
+        padding-right: 1px;
+
+        @include md(){
+            padding-right: 0px;
+        padding-left: 10px;
+        }
+        @include sm(){
+            padding-right: 133px;
+            padding-left: 0px;
+            align-items: flex-end;
+            width: 695px;
+        }
+
+        @include xs(){
+            // padding-right: 133px;
+            // padding-left: 20px;
+            // align-items: flex-end;
+            // width: 460px;
+        }
+
+        .logo{
+            h4{
+                            border-radius: 50%;
+                            background-color: var(--brand-light);
+                            color: rgb(255, 255, 255);
+                            height: 50px;
+                            width:50px;
+                            line-height: 50px;
+                            text-align: center;
+                            align-items: center;
+                            display: inline-block;
+                            font-size: 25px;
+            }
+            // border: var(--border);
+            img{
+                width: 160px;
+                padding-left: 5px;
+
+                @include xs(){
+                    width: 116px;
+                    padding-left: 0px;
+                }
+            }
+        }
+        .right_content{
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            .nav{
+                // border: var(--border);
+                flex: 1;
+                display: grid;
+                align-items: center;
+                ul{
+                    li{
+                        .fa-buromobelexperte{
+                            font-size: 20px; 
+                            margin-right: 3px;
+                        }
+                    }
+                }
+            }
+            .extra_links{
+                display: flex;
+                .search{
+                    // border: var(--border);
+                    a {
+                        padding-top: 5px;
+                        color: var(--black-deep);
+                    }
+                }
+                .nav_control{
+                    // border: var(--border);
+                    display: grid;
+                    align-items: center;
+                    order: 3;
+                    display: none;
+                    a{
+                        line-height: 10px;
+                        span{
+                            color: var(--black-deep);
+                        }
+                    }
+                }
+            } 
+            @include custom_media(0px, 991.9px){
+                justify-content: flex-end;
+                .nav{
+                    order: 2;
+                    flex: unset;
+                    ul{
+                        li{
+                            &.close_nav{
+                                display: block;
+                                
+                            }
+                        }
+                    }
+                }
+                .extra_links{
+                    order: 1;
+                    .nav_control{
+                        display: grid;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+     }
+}

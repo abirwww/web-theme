@@ -1,0 +1,135 @@
+#our_features{
+    background: #F2FCFF;
+    padding: 125px 0px;
+    padding-left: 2px;
+
+    .our_features_body{
+        // border: var(--border);
+        display: grid;
+        grid-template-columns: 417px 1fr;
+        gap: 50px;
+
+        @include md(){
+            display: grid;
+            grid-template-columns: 345px 1fr;
+            gap: 0px;
+        }
+        @include sm(){
+            display: block;
+            text-align: center;
+        }
+        @include xs(){
+            display: block;
+        }
+        .feature_description{
+            .common_heading{
+                h2{
+                    font-family: var(--play_fair);
+                    font-size: 48px;
+                    line-height: 58px;
+
+                    @include lg(){
+                        font-family: var(--play_fair);
+                        font-size: 56px;
+                        line-height: 58px;
+                        padding-left: 98px;
+                    }
+                    @include md(){
+                        font-family: var(--play_fair);
+                        font-size: 38px;
+                        line-height: 46px;
+                        padding-left: 0px;
+                    }
+                    @include xs(){
+                        font-family: var(--play_fair);
+                        font-size: 28px;
+                        line-height: 34px;
+                    }
+                }
+                p{
+                    font-size: 20px;
+                    font-family: var(--poppin_regular);
+                    line-height: 36px;
+                    color: var(--grey);
+                    margin-top: 30px;
+
+                    @include lg(){
+                        font-size: 20px;
+                        font-family: var(--poppin_regular);
+                        line-height: 36px;
+                        color: var(--grey);
+                        margin-top: 30px;
+                        padding-left: 98px;
+                    }
+                    @include md(){
+                        font-size: 15px;
+                        font-family: var(--poppin_regular);
+                        line-height: 30px;
+                        color: var(--grey);
+                        margin-top: 30px;
+                        padding-left: 0;
+                    }
+                    @include sm(){
+                        margin: 30px 60px;
+                    }
+                    @include xs(){
+                        width: 294px;
+                        font-size: 16px;
+                        line-height: 23px;
+                    }
+                }
+            }
+        }
+        .feature_list{
+            display: grid;
+            grid-template-columns: 255px 255px;
+            gap: 100px;
+
+            @include lg(){
+                display: grid;
+                grid-template-columns: 200px 200px;
+                gap: 10px;
+            }
+            @include md(){
+                display: grid;
+                grid-template-columns: 200px 200px;
+                gap: 10px;
+            }
+            @include sm(){
+                display: grid;
+                grid-template-columns: 260px 260px;
+                gap: 30px;
+            }
+            @include xs(){
+                display: block;
+                padding: 20px
+            }
+            .featur_item{
+                background-color: #FCFCFC;
+                padding: 24px;
+                padding: 24px;
+                box-shadow: 0px 18px 58px 16px #0000000F;
+                border-radius: 8px;
+                @include xs{
+                    margin: 25px;
+                }
+                .icon{
+                    img{
+                        width: 37px;
+                    }
+                }
+                h3{
+                    font-family: var(--play_fair);
+                    font-size: 22px;
+                    margin-top: 8px;
+                }
+                p{
+                    margin-top: 10px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: var(--grey);
+                }
+            } 
+        }
+    }
+}

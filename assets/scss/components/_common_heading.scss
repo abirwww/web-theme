@@ -1,0 +1,10 @@
+.common_heading{
+    &.center{
+        text-align: center;
+    }
+    &.white{
+        p,h2{
+            color: var(--white);
+        }
+    }
+}
